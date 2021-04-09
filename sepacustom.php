@@ -64,8 +64,6 @@ function sepacustom_civicrm_defer_collection_date(&$collection_date, $creditor_i
     '2020-12-25',
     '2021-01-01',
     '2021-01-06',
-    '2021-04-02',
-    '2021-04-05',
     '2021-05-13',
     '2021-05-24',
     '2021-06-03',
