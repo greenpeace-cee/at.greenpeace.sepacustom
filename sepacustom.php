@@ -120,7 +120,8 @@ function sepacustom_civicrm_create_mandate(&$mandate_parameters) {
     return;   // user defined mandate
 
   // GP-1-FRST-2016-Cxxxxxxx-xxx
-  $reference_fmt = "GP-%s-%s-%s-C%07d-%03d";
+  $prefix = Civi::settings()->get('sepacustom_reference_prefix') ?? 'GP';
+  $reference_fmt = "{$prefix}-%s-%s-%s-C%07d-%03d";
   $creditor_id   = $mandate_parameters['creditor_id'];
   $type          = $mandate_parameters['type'];
   $year          = date('Y');
@@ -216,7 +217,7 @@ function sepacustom_civicrm_post($op, $objectName, $objectId, &$objectRef) {
  * @see https://redmine.greenpeace.at/issues/434
  */
 function sepacustom_civicrm_modify_txmessage(&$txmessage, $info, $creditor) {
-  $txmessage = "Greenpeace Beitrag Danke - {$info['reference']}";
+  $txmessage .= " - {$info['reference']}";
 }
 
 
