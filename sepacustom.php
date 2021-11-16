@@ -162,7 +162,8 @@ function sepacustom_civicrm_create_mandate(&$mandate_parameters) {
  * @access public
  */
 function sepacustom_civicrm_modify_txgroup_reference(&$reference, $creditor_id, $mode, $collection_date) {
-  $base_reference = substr($mode, 0, 1) . "{$creditor_id}-{$collection_date}";
+  $prefix = Civi::settings()->get('sepacustom_reference_prefix') ?? 'GP';
+  $base_reference = "{$prefix}-" . substr($mode, 0, 1) . "{$creditor_id}-{$collection_date}";
   $suffix = 0;
 
   while ($suffix < 1000) {
