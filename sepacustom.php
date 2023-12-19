@@ -99,6 +99,17 @@ function sepacustom_civicrm_defer_collection_date(&$collection_date, $creditor_i
     '2023-12-24',
     '2023-12-25',
     '2023-12-26',
+    '2024-01-01',
+    '2024-03-29',
+    '2024-04-01',
+    '2024-05-01',
+    '2024-05-09',
+    '2024-05-20',
+    '2024-05-30',
+    '2024-08-15',
+    '2024-11-01',
+    '2024-12-25',
+    '2024-12-26',
   ];
 
   while ( date('N', strtotime($collection_date)) > 5            // if Saturday or Sunday
