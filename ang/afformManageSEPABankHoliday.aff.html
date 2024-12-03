@@ -1,0 +1,8 @@
+<af-form ctrl="afform">
+  <af-entity type="SepaBankHoliday" name="SepaBankHoliday1" label="SepaBankHoliday 1" actions="{create: true, update: true}" security="FBAC" url-autofill="1" />
+  <fieldset af-fieldset="SepaBankHoliday1" class="af-container" af-title="SEPA Bank Holiday">
+    <af-field name="bank_holiday_date" defn="{default_date_type: 'fixed', input_attrs: {}}" />
+    <af-field name="description" />
+  </fieldset>
+  <button class="af-button btn btn-primary" crm-icon="fa-check" ng-click="afform.submit()" ng-if="afform.showSubmitButton">Submit</button>
+</af-form>

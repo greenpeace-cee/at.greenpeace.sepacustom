@@ -1,0 +1,16 @@
+{
+    "type": "search",
+    "title": "SEPA Bank Holidays",
+    "placement": [],
+    "icon": "fa-calendar",
+    "server_route": "civicrm/sepa/holiday",
+    "permission": [
+        "access CiviCRM"
+    ],
+    "permission_operator": "AND",
+    "navigation": {
+        "parent": "CiviContribute",
+        "label": "SEPA Bank Holidays",
+        "weight": 0
+    }
+}
